@@ -107,7 +107,7 @@ pub mod validators {
 		match value {
 			Some(v) if !v.trim().is_empty() => Ok(v.trim()),
 			_ => Err(ValidationError::with_field(
-				&format!("{} is required", field),
+				&format!("{field} is required"),
 				field,
 				"REQUIRED",
 			)),
@@ -119,7 +119,7 @@ pub mod validators {
 		let len = value.len();
 		if len < min || len > max {
 			Err(ValidationError::with_field(
-				&format!("{} must be between {} and {} characters", field, min, max),
+				&format!("{field} must be between {min} and {max} characters"),
 				field,
 				"LENGTH",
 			))
@@ -200,7 +200,7 @@ pub mod validators {
 			Ok(())
 		} else {
 			Err(ValidationError::with_field(
-				&format!("{} must be a positive integer", field),
+				&format!("{field} must be a positive integer"),
 				field,
 				"NOT_POSITIVE",
 			))
@@ -213,7 +213,7 @@ pub mod validators {
 			Ok(())
 		} else {
 			Err(ValidationError::with_field(
-				&format!("{} must be between {} and {}", field, min, max),
+				&format!("{field} must be between {min} and {max}"),
 				field,
 				"OUT_OF_RANGE",
 			))
@@ -360,15 +360,15 @@ mod tests {
 		assert!(result.is_err());
 		let errors = result.unwrap_err();
 		assert!(errors.has_errors());
-		assert!(errors.errors.len() > 0);
+		assert!(!errors.errors.is_empty());
 	}
 
 	#[test]
 	fn test_validation_macro() {
-		let username = Some("test");
+		let username = "test";
 		let result = validate!(
-			required(username, "username").map(|_| ()),
-			length(username.unwrap(), 3, 10, "username")
+			required(Some(username), "username").map(|_| ()),
+			length(username, 3, 10, "username")
 		);
 		assert!(result.is_ok());
 

@@ -17,12 +17,12 @@ use crate::utils::logging;
 // Global database client using Any engine for multi-protocol support
 pub static DB: LazyLock<Surreal<Any>> = LazyLock::new(Surreal::init);
 
-#[derive(Clone)]
+#[derive(Clone, Default)]
 pub struct AppState {}
 
 impl AppState {
 	pub fn new() -> Self {
-		Self {}
+		Self::default()
 	}
 
 	pub fn new_test() -> Self {
@@ -154,7 +154,7 @@ pub mod database {
 		let greeting: Option<String> = result.take(0)?;
 
 		if let Some(msg) = greeting {
-			println!("✅ Database response: {}", msg);
+			println!("✅ Database response: {msg}");
 		}
 
 		println!("🎉 Documentation pattern works perfectly!");
@@ -170,13 +170,13 @@ mod tests {
 	#[test]
 	fn test_app_state_creation() {
 		let _state = AppState::new();
-		assert!(true); // AppState is just an empty struct now
+		// AppState is just an empty struct now
 	}
 
 	#[test]
 	fn test_app_state_test_creation() {
 		let _state = AppState::new_test();
-		assert!(true); // AppState is just an empty struct now
+		// AppState is just an empty struct now
 	}
 
 	#[test]

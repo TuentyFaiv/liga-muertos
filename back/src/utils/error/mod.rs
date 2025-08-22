@@ -179,12 +179,10 @@ impl ApiError {
 
 	/// Check if this error should be logged as an error (vs warning/info)
 	pub fn should_log_as_error(&self) -> bool {
-		match self {
-			ApiError::Database { .. } | ApiError::Internal { .. } | ApiError::ExternalService { .. } => {
-				true
-			}
-			_ => false,
-		}
+		matches!(
+			self,
+			ApiError::Database { .. } | ApiError::Internal { .. } | ApiError::ExternalService { .. }
+		)
 	}
 }
 
@@ -192,9 +190,9 @@ impl ResponseError for ApiError {
 	fn error_response(&self) -> HttpResponse {
 		// Log the error with appropriate level
 		if self.should_log_as_error() {
-			log::error!("API Error: {}", self);
+			log::error!("API Error: {self}");
 		} else {
-			log::warn!("API Warning: {}", self);
+			log::warn!("API Warning: {self}");
 		}
 
 		let mut error_response = ApiErrorResponse::new(self.to_string(), self.error_code());
@@ -214,7 +212,7 @@ impl ResponseError for ApiError {
 /// Conversion from SurrealDB errors
 impl From<surrealdb::Error> for ApiError {
 	fn from(error: surrealdb::Error) -> Self {
-		log::error!("SurrealDB error: {}", error);
+		log::error!("SurrealDB error: {error}");
 
 		// Try to categorize SurrealDB errors
 		let error_string = error.to_string();
@@ -243,7 +241,7 @@ impl From<surrealdb::Error> for ApiError {
 /// Conversion from JSON parsing errors
 impl From<serde_json::Error> for ApiError {
 	fn from(error: serde_json::Error) -> Self {
-		log::warn!("JSON parsing error: {}", error);
+		log::warn!("JSON parsing error: {error}");
 		ApiError::JsonParsing {
 			message: error.to_string(),
 		}
@@ -281,7 +279,7 @@ where
 {
 	fn with_context(self, context: &str) -> ApiResult<T> {
 		self.map_err(|e| ApiError::Internal {
-			message: format!("{}: {}", context, e),
+			message: format!("{context}: {e}"),
 		})
 	}
 

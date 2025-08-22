@@ -58,20 +58,15 @@ pub struct FullParticipantInfo {
 }
 
 /// Participant status enumeration
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 #[serde(rename_all = "snake_case")]
 pub enum ParticipantStatus {
+	#[default]
 	Registered,
 	Active,
 	Eliminated,
 	Withdrawn,
 	Disqualified,
-}
-
-impl Default for ParticipantStatus {
-	fn default() -> Self {
-		ParticipantStatus::Registered
-	}
 }
 
 /// Tournament participation statistics

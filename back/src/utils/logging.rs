@@ -89,7 +89,7 @@ pub fn init() {
 			"error" => LevelFilter::Error,
 			"off" => LevelFilter::Off,
 			_ => {
-				eprintln!("⚠️  Invalid LOG_LEVEL '{}', using default", level);
+				eprintln!("⚠️  Invalid LOG_LEVEL '{level}', using default");
 				LevelFilter::Info
 			}
 		};
@@ -103,15 +103,15 @@ pub fn init() {
 /// Log application startup information
 pub fn startup_info(port: u16) {
 	log::info!("🦀 Starting La Liga de los Muertos backend");
-	log::info!("🌐 Server will bind to 0.0.0.0:{}", port);
+	log::info!("🌐 Server will bind to 0.0.0.0:{port}");
 	log::info!("📝 API documentation: https://la-liga-de-los-muertos.apidog.io");
 	log::debug!("🔧 Debug logging enabled");
 }
 
 /// Log database connection information
 pub fn database_info(url: &str, namespace: &str, database: &str) {
-	log::info!("🔌 Connected to SurrealDB at {}", url);
-	log::info!("📊 Using namespace: {} / database: {}", namespace, database);
+	log::info!("🔌 Connected to SurrealDB at {url}");
+	log::info!("📊 Using namespace: {namespace} / database: {database}");
 }
 
 /// Log database schema initialization
@@ -126,18 +126,15 @@ pub fn schema_success() {
 
 /// Log database connection failure
 pub fn database_error(error: &str) {
-	log::error!("❌ Failed to initialize database connection: {}", error);
+	log::error!("❌ Failed to initialize database connection: {error}");
 	log::error!("🔧 Please check your database configuration and try again.");
 	log::error!("💡 Ensure SurrealDB is running and accessible at the configured URL");
 }
 
 /// Log server startup success
 pub fn server_ready(port: u16) {
-	log::info!("🚀 Server ready and listening on port {}", port);
-	log::info!(
-		"🏥 Health check available at: http://localhost:{}/v1/health",
-		port
-	);
+	log::info!("🚀 Server ready and listening on port {port}");
+	log::info!("🏥 Health check available at: http://localhost:{port}/health");
 }
 
 /// Log graceful shutdown
@@ -149,8 +146,8 @@ pub fn shutdown() {
 pub fn request_debug(method: &str, path: &str, user_agent: Option<&str>) {
 	if log::log_enabled!(log::Level::Debug) {
 		match user_agent {
-			Some(ua) => log::debug!("📥 {} {} - User-Agent: {}", method, path, ua),
-			None => log::debug!("📥 {} {}", method, path),
+			Some(ua) => log::debug!("📥 {method} {path} - User-Agent: {ua}"),
+			None => log::debug!("📥 {method} {path}"),
 		}
 	}
 }
@@ -158,34 +155,27 @@ pub fn request_debug(method: &str, path: &str, user_agent: Option<&str>) {
 /// Log performance metrics
 pub fn performance_metric(operation: &str, duration_ms: u64) {
 	if duration_ms > 1000 {
-		log::warn!("⏰ Slow operation: {} took {}ms", operation, duration_ms);
+		log::warn!("⏰ Slow operation: {operation} took {duration_ms}ms");
 	} else {
-		log::debug!("⚡ {}: {}ms", operation, duration_ms);
+		log::debug!("⚡ {operation}: {duration_ms}ms");
 	}
 }
 
 /// Log authentication events
 pub fn auth_event(event: &str, user_id: Option<&str>) {
 	match user_id {
-		Some(id) => log::info!("🔐 Auth event: {} for user {}", event, id),
-		None => log::info!("🔐 Auth event: {}", event),
+		Some(id) => log::info!("🔐 Auth event: {event} for user {id}"),
+		None => log::info!("🔐 Auth event: {event}"),
 	}
 }
 
 /// Log tournament events
 pub fn tournament_event(event: &str, tournament_id: &str, user_id: Option<&str>) {
 	match user_id {
-		Some(id) => log::info!(
-			"🏆 Tournament event: {} for tournament {} by user {}",
-			event,
-			tournament_id,
-			id
-		),
-		None => log::info!(
-			"🏆 Tournament event: {} for tournament {}",
-			event,
-			tournament_id
-		),
+		Some(id) => {
+			log::info!("🏆 Tournament event: {event} for tournament {tournament_id} by user {id}")
+		}
+		None => log::info!("🏆 Tournament event: {event} for tournament {tournament_id}"),
 	}
 }
 

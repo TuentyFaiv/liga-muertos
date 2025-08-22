@@ -63,7 +63,7 @@ pub mod validation {
 			&& email.len() < 255
 			&& !email.starts_with('@')
 			&& !email.ends_with('@')
-			&& email.chars().all(|c| c.is_ascii())
+			&& email.is_ascii()
 	}
 
 	/// Check if a username is valid

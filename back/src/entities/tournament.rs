@@ -63,9 +63,10 @@ pub struct TournamentWithCreator {
 }
 
 /// Tournament status enumeration
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 #[serde(rename_all = "snake_case")]
 pub enum TournamentStatus {
+	#[default]
 	Draft,
 	Published,
 	InProgress,
@@ -73,26 +74,15 @@ pub enum TournamentStatus {
 	Cancelled,
 }
 
-impl Default for TournamentStatus {
-	fn default() -> Self {
-		TournamentStatus::Draft
-	}
-}
-
 /// Tournament type enumeration
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 #[serde(rename_all = "snake_case")]
 pub enum TournamentType {
+	#[default]
 	SingleElimination,
 	DoubleElimination,
 	RoundRobin,
 	Swiss,
-}
-
-impl Default for TournamentType {
-	fn default() -> Self {
-		TournamentType::SingleElimination
-	}
 }
 
 #[cfg(test)]

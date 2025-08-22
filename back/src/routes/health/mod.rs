@@ -18,7 +18,7 @@ async fn status() -> ApiResult<HttpResponse> {
 		Ok(_) => Some("Connected".to_string()),
 		Err(e) => {
 			// Log database connection issue but don't fail health check
-			log::warn!("Health check database query failed: {}", e);
+			log::warn!("Health check database query failed: {e}");
 			Some("Disconnected".to_string())
 		}
 	};

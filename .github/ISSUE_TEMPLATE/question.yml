@@ -1,0 +1,146 @@
+name: ❓ Question/Discussion
+description: Ask a question or start a discussion about the project
+title: "❓ [QUESTION]: "
+labels: ["question", "discussion", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in La Liga de los Muertos! Please use this template to ask questions or start discussions about the project.
+
+  - type: dropdown
+    id: question-type
+    attributes:
+      label: Question Type
+      description: What type of question or discussion is this?
+      options:
+        - General question about the project
+        - Technical implementation question
+        - Usage/How-to question
+        - Architecture discussion
+        - Feature discussion
+        - Development workflow question
+        - Deployment question
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Related Component
+      description: Which part of the project is your question about?
+      options:
+        - General/Project overview
+        - Frontend (SvelteKit)
+        - Backend (Rust/Actix)
+        - Database (SurrealDB Cloud)
+        - Authentication (Clerk/Twitch)
+        - API (APIdog)
+        - Development workflow
+        - Git Flow/Branching
+        - Deployment/Infrastructure
+        - Contributing
+        - Not sure/Multiple components
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know or discuss?
+      placeholder: |
+        Please be as specific as possible:
+        - What exactly are you trying to understand or achieve?
+        - What have you already tried or researched?
+        - What specific aspect needs clarification?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context/Background
+      description: Provide any relevant context or background information
+      placeholder: |
+        - What you're working on
+        - Your experience level with the technologies involved
+        - Any relevant project details
+        - Why you need this information
+
+  - type: textarea
+    id: research
+    attributes:
+      label: What You've Already Tried
+      description: What research or attempts have you already made?
+      placeholder: |
+        - Documentation you've read
+        - Similar projects you've looked at
+        - Code you've tried
+        - Resources you've consulted
+
+  - type: textarea
+    id: expected-outcome
+    attributes:
+      label: Expected Outcome
+      description: What kind of answer or discussion outcome are you looking for?
+      placeholder: |
+        - Specific solution or guidance
+        - Best practices recommendation
+        - Design decision rationale
+        - Community input on approach
+        - Other (please specify)
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency
+      description: How soon do you need an answer?
+      options:
+        - No rush - whenever convenient
+        - Soon - within a few days
+        - Urgent - blocking my work
+        - Just curious - no timeline
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any other relevant details, code snippets, or references
+      placeholder: |
+        - Code snippets (if applicable)
+        - Error messages (if any)
+        - Links to relevant resources
+        - Screenshots or examples
+        - Any other helpful context
+
+  - type: checkboxes
+    id: discussion-preferences
+    attributes:
+      label: Discussion Preferences
+      description: How would you prefer this question to be handled?
+      options:
+        - label: I'm open to this becoming a broader discussion if others are interested
+        - label: I would appreciate multiple perspectives/approaches
+        - label: I'm looking for the "official" project approach/recommendation
+        - label: I'd like to contribute to documentation based on the answer
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please verify the following before submitting
+      options:
+        - label: I have searched existing issues and discussions for similar questions
+          required: true
+        - label: I have provided sufficient context and background
+          required: true
+        - label: I have clearly stated what I'm trying to understand or achieve
+          required: true
+        - label: This question is related to La Liga de los Muertos project
+          required: true

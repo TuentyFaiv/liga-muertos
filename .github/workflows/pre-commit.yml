@@ -1,0 +1,145 @@
+name: Pre-commit Quality Gates
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+env:
+  NODE_VERSION: '22'
+  BUN_VERSION: '1.1.38'
+
+jobs:
+  # Quick quality checks that run before full CI
+  quality-gates:
+    name: Quality Gates
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.draft == false
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+
+      - name: Cache frontend dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('front/bun.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
+      - name: Cache Rust dependencies
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: back
+
+      - name: Install frontend dependencies
+        working-directory: ./front
+        run: bun install --frozen-lockfile
+
+      - name: Frontend lint check
+        working-directory: ./front
+        run: bun run lint
+
+      - name: Frontend type check
+        working-directory: ./front
+        run: bun run check
+
+      - name: Backend format check
+        working-directory: ./back
+        run: cargo fmt -- --check
+
+      - name: Backend lint check
+        working-directory: ./back
+        run: cargo clippy --all-targets --all-features -- -D warnings
+
+      - name: Check commit message format
+        if: github.event_name == 'pull_request'
+        run: |
+          # Get the commit messages from this PR
+          COMMITS=$(git log --oneline origin/${{ github.base_ref }}..${{ github.sha }} --pretty=format:"%s")
+
+          # Check if commits follow gitmoji + prefix format
+          echo "Checking commit message format..."
+          while IFS= read -r commit; do
+            if [[ ! "$commit" =~ ^[[:space:]]*[🎉✨🐛💄🔧📝♻️🧪🚀🔒🌍🎯🤝💡📋⚡🦀🏆🚨🌟📱🎮🔄💚🎨🔥🚮📦🏗️💥🍱📊🗃️🚚📄🔀⏪⏩📌🔖🚨💯✅🚩🔧🌐💬🚸📸🎬🎭🎨🎵🎵🖼️🎨🔇🔈🔉🔊🎶🎙️🎚️🎛️📻📱☎️📞📟📠🔋🔌💻💾💿📀🖥️⌨️🖱️🖨️📷📹🎥💾💿💽📀💻📱☎️📞📠📟📺📻⏰⏲️⏱️🕰️🕛🕧🕐🕜🕑🕝🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦][[:space:]]+[A-Z]+:[[:space:]] ]]; then
+              echo "❌ Commit message doesn't follow format: $commit"
+              echo "Expected format: <gitmoji> <PREFIX>: <description>"
+              echo "Example: ✨ FEAT: Add new tournament feature"
+              exit 1
+            fi
+          done <<< "$COMMITS"
+          echo "✅ All commit messages follow the correct format"
+
+      - name: Check for TODOs in code
+        run: |
+          echo "Checking for TODO comments that should be addressed..."
+          TODO_COUNT=$(find . -type f \( -name "*.ts" -o -name "*.js" -o -name "*.svelte" -o -name "*.rs" \) -not -path "./node_modules/*" -not -path "./target/*" -not -path "./.svelte-kit/*" | xargs grep -i "TODO\|FIXME\|HACK" | wc -l)
+
+          if [ $TODO_COUNT -gt 0 ]; then
+            echo "⚠️ Found $TODO_COUNT TODO/FIXME/HACK comments:"
+            find . -type f \( -name "*.ts" -o -name "*.js" -o -name "*.svelte" -o -name "*.rs" \) -not -path "./node_modules/*" -not -path "./target/*" -not -path "./.svelte-kit/*" | xargs grep -n -i "TODO\|FIXME\|HACK"
+            echo ""
+            echo "Please address these before merging or add them as GitHub issues."
+          else
+            echo "✅ No TODO comments found"
+          fi
+
+      - name: Check file sizes
+        run: |
+          echo "Checking for large files..."
+          LARGE_FILES=$(find . -type f -size +1M -not -path "./node_modules/*" -not -path "./target/*" -not -path "./.svelte-kit/*" -not -path "./.git/*")
+
+          if [ ! -z "$LARGE_FILES" ]; then
+            echo "⚠️ Found large files (>1MB):"
+            echo "$LARGE_FILES" | while read file; do
+              size=$(du -h "$file" | cut -f1)
+              echo "  $file ($size)"
+            done
+            echo ""
+            echo "Consider if these files are necessary or if they should use Git LFS."
+          else
+            echo "✅ No large files found"
+          fi
+
+      - name: Check package.json/Cargo.toml changes
+        if: github.event_name == 'pull_request'
+        run: |
+          # Check if dependencies were added
+          PACKAGE_CHANGED=$(git diff --name-only origin/${{ github.base_ref }}..${{ github.sha }} | grep -E "(package\.json|Cargo\.toml)" || true)
+
+          if [ ! -z "$PACKAGE_CHANGED" ]; then
+            echo "📦 Dependencies were modified:"
+            echo "$PACKAGE_CHANGED"
+            echo ""
+            echo "Make sure to:"
+            echo "1. Update lock files (bun.lock/Cargo.lock)"
+            echo "2. Verify no unnecessary dependencies were added"
+            echo "3. Check for security vulnerabilities"
+          else
+            echo "✅ No dependency changes detected"
+          fi
+
+      - name: Summary
+        run: |
+          echo "🎉 Pre-commit quality gates passed!"
+          echo ""
+          echo "✅ Code formatting and linting"
+          echo "✅ Type checking"
+          echo "✅ Commit message format"
+          echo "✅ File size check"
+          echo "✅ TODO comment check"
+          echo "✅ Dependency change check"
+          echo ""
+          echo "Ready for full CI pipeline! 🚀"

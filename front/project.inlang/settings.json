@@ -1,0 +1,14 @@
+{
+	"$schema": "https://inlang.com/schema/project-settings",
+	"baseLocale": "es",
+	"locales": ["en", "es"],
+	"modules": [
+		"https://cdn.jsdelivr.net/npm/@inlang/plugin-message-format@4/dist/index.js",
+		"https://cdn.jsdelivr.net/npm/@inlang/plugin-i18next@latest/dist/index.js"
+	],
+	"plugin.inlang.i18next": {
+		"pathPattern": {
+			"translation": "./locales/{locale}/translation.json"
+		}
+	}
+}

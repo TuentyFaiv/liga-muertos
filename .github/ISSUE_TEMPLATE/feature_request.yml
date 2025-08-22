@@ -1,0 +1,191 @@
+name: ✨ Feature Request
+description: Suggest a new feature or enhancement
+title: "✨ [FEATURE]: "
+labels: ["enhancement", "feature", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please provide as much detail as possible to help us understand and evaluate your request.
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which part of the application would this feature affect?
+      options:
+        - Frontend (SvelteKit)
+        - Backend (Rust/Actix)
+        - Database (SurrealDB)
+        - Authentication (Clerk)
+        - API
+        - Documentation
+        - DevOps/Infrastructure
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: Feature Type
+      description: What type of feature is this?
+      options:
+        - New functionality
+        - Enhancement to existing feature
+        - Performance improvement
+        - Developer experience
+        - User interface improvement
+        - Integration
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve? What pain point are you experiencing?
+      placeholder: |
+        As a [user type], I want [goal] so that [benefit].
+
+        Current situation:
+        - What's missing or problematic?
+        - How are users currently working around this?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe your proposed solution in detail
+      placeholder: |
+        Detailed description of the proposed feature:
+        - How should it work?
+        - What should users be able to do?
+        - Any specific implementation ideas?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions
+      description: What other approaches have you considered?
+      placeholder: |
+        - Alternative approach 1: ...
+        - Alternative approach 2: ...
+        - Why the proposed solution is preferred...
+
+  - type: textarea
+    id: user-stories
+    attributes:
+      label: User Stories
+      description: Provide user stories that describe how this feature would be used
+      placeholder: |
+        - As a streamer, I want to ... so that I can ...
+        - As a viewer, I want to ... so that I can ...
+        - As an admin, I want to ... so that I can ...
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this feature?
+      options:
+        - Low - Nice to have
+        - Medium - Would improve user experience
+        - High - Important for user satisfaction
+        - Critical - Blocking or essential functionality
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency
+      description: How soon do you need this feature?
+      options:
+        - No rush - Future release
+        - Soon - Next few releases
+        - ASAP - Next release if possible
+        - Urgent - Needed immediately
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Mockups/Wireframes
+      description: If applicable, add mockups, wireframes, or visual references
+      placeholder: Drag and drop images or paste URLs here
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define what "done" looks like for this feature
+      placeholder: |
+        - [ ] Criterion 1: ...
+        - [ ] Criterion 2: ...
+        - [ ] Criterion 3: ...
+
+  - type: textarea
+    id: technical-considerations
+    attributes:
+      label: Technical Considerations
+      description: Any technical aspects to consider?
+      placeholder: |
+        - Performance implications
+        - Security considerations
+        - Database schema changes
+        - API changes
+        - Third-party integrations
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Are there any dependencies on other features or external factors?
+      placeholder: |
+        - Depends on feature X
+        - Requires integration with Y
+        - Blocked by Z
+
+  - type: dropdown
+    id: user-impact
+    attributes:
+      label: User Impact
+      description: How many users would benefit from this feature?
+      options:
+        - Few users (specific use case)
+        - Some users (moderate benefit)
+        - Most users (broad benefit)
+        - All users (universal benefit)
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context, examples, or references
+      placeholder: |
+        - Links to similar features in other applications
+        - Research or user feedback
+        - Business requirements
+        - Any other relevant information
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please verify the following before submitting
+      options:
+        - label: I have searched for similar feature requests before creating this one
+          required: true
+        - label: I have provided clear problem statement and proposed solution
+          required: true
+        - label: I have considered the impact and priority of this feature
+          required: true
+        - label: This feature request is related to La Liga de los Muertos project
+          required: true

@@ -1,0 +1,169 @@
+name: 📝 Documentation
+description: Report documentation issues or suggest improvements
+title: "📝 [DOCS]: "
+labels: ["documentation", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve our documentation! Please provide details about what needs to be documented or improved.
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: Documentation Type
+      description: What type of documentation is this about?
+      options:
+        - README files
+        - API documentation (APIdog)
+        - Code comments
+        - Setup/Installation guide
+        - User guide
+        - Developer guide
+        - Architecture documentation
+        - Contributing guidelines
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which part of the project does this documentation relate to?
+      options:
+        - Monorepo (root)
+        - Frontend (SvelteKit)
+        - Backend (Rust/Actix)
+        - Database (SurrealDB)
+        - Authentication (Clerk)
+        - Development workflow
+        - Deployment
+        - General
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      description: What kind of documentation issue is this?
+      options:
+        - Missing documentation
+        - Outdated/incorrect documentation
+        - Unclear/confusing documentation
+        - Documentation improvement
+        - New documentation request
+        - Typo/grammar fix
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the documentation issue or improvement needed
+      placeholder: |
+        - What documentation is missing, unclear, or needs improvement?
+        - What specific section or topic needs attention?
+        - What confusion or problems does this cause?
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-state
+    attributes:
+      label: Current State
+      description: What is the current state of the documentation?
+      placeholder: |
+        - Link to existing documentation (if applicable)
+        - What's currently documented?
+        - What's missing or incorrect?
+
+  - type: textarea
+    id: expected-improvement
+    attributes:
+      label: Expected Improvement
+      description: What should the documentation look like after the improvement?
+      placeholder: |
+        - What information should be included?
+        - How should it be organized?
+        - What examples or details would be helpful?
+    validations:
+      required: true
+
+  - type: textarea
+    id: target-audience
+    attributes:
+      label: Target Audience
+      description: Who is the primary audience for this documentation?
+      placeholder: |
+        - New developers joining the project
+        - End users of the application
+        - API consumers
+        - Deployment/DevOps team
+        - Contributors
+        - Other (specify)
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this documentation improvement?
+      options:
+        - Low - Minor improvement
+        - Medium - Would help users/developers
+        - High - Important for project usability
+        - Critical - Blocking or essential information missing
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-content
+    attributes:
+      label: Suggested Content
+      description: If you have specific content suggestions, please provide them
+      placeholder: |
+        - Specific text suggestions
+        - Code examples
+        - Links to reference materials
+        - Outline or structure ideas
+
+  - type: textarea
+    id: related-files
+    attributes:
+      label: Related Files/URLs
+      description: List any files or URLs related to this documentation issue
+      placeholder: |
+        - /path/to/file.md
+        - https://example.com/reference
+        - Related API endpoints
+        - Configuration files
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other context or information that would be helpful
+      placeholder: |
+        - User feedback or confusion encountered
+        - Related issues or discussions
+        - Screenshots of current documentation
+        - Any other relevant information
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please verify the following before submitting
+      options:
+        - label: I have searched for similar documentation issues before creating this one
+          required: true
+        - label: I have clearly described what documentation needs attention
+          required: true
+        - label: I have considered the target audience for this documentation
+          required: true
+        - label: This documentation request is related to La Liga de los Muertos project
+          required: true

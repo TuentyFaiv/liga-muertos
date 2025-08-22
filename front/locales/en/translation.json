@@ -1,0 +1,10 @@
+{
+	"seo": {
+		"title": "La Liga de los Muertos",
+		"description": "Welcome to the La Liga de los Muertos! Here you can view teams, players, and league statistics. Enjoy the game!"
+	},
+	"header": {
+		"language": "Language",
+		"theme-toggle": "Toggle Theme"
+	}
+}

@@ -1,0 +1,20 @@
+# Rust formatting configuration for La Liga de los Muertos backend
+
+# Use hard tabs instead of spaces
+hard_tabs = true
+
+# Set tab width to 2 spaces
+tab_spaces = 2
+
+# Maximum line width
+max_width = 100
+
+# Edition compatibility
+edition = "2024"
+
+# Basic formatting options
+reorder_imports = true
+reorder_modules = true
+remove_nested_parens = true
+use_field_init_shorthand = true
+newline_style = "Unix"

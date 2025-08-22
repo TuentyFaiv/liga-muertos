@@ -1,0 +1,236 @@
+name: Test Coverage
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+env:
+  NODE_VERSION: '22'
+  BUN_VERSION: '1.1.38'
+
+jobs:
+  frontend-coverage:
+    name: Frontend Coverage
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./front
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('front/bun.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Run tests with coverage
+        run: bun run test:unit -- --run --coverage
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./front/coverage/lcov.info
+          flags: frontend
+          name: frontend-coverage
+          directory: ./front
+          fail_ci_if_error: false
+
+      - name: Coverage report summary
+        run: |
+          echo "## Frontend Test Coverage 📊" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ -f coverage/coverage-summary.json ]; then
+            echo "Coverage summary generated ✅" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "No coverage summary found ❌" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Archive coverage reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-coverage-report
+          path: front/coverage/
+          retention-days: 30
+
+  backend-coverage:
+    name: Backend Coverage
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./back
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: llvm-tools-preview
+
+      - name: Cache Rust dependencies
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: back
+
+      - name: Install cargo-llvm-cov
+        uses: taiki-e/install-action@cargo-llvm-cov
+
+      - name: Generate coverage
+        run: cargo llvm-cov --all-features --workspace --lcov --output-path lcov.info
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./back/lcov.info
+          flags: backend
+          name: backend-coverage
+          directory: ./back
+          fail_ci_if_error: false
+
+      - name: Generate HTML coverage report
+        run: cargo llvm-cov --all-features --workspace --html
+
+      - name: Coverage report summary
+        run: |
+          echo "## Backend Test Coverage 📊" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Coverage report generated for Rust backend ✅" >> $GITHUB_STEP_SUMMARY
+
+          # Extract coverage percentage if available
+          if [ -f lcov.info ]; then
+            COVERAGE=$(grep -o 'SF:.*' lcov.info | wc -l)
+            echo "Files covered: $COVERAGE" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Archive coverage reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-coverage-report
+          path: |
+            back/target/llvm-cov/html/
+            back/lcov.info
+          retention-days: 30
+
+  coverage-comment:
+    name: Coverage Comment
+    runs-on: ubuntu-latest
+    needs: [frontend-coverage, backend-coverage]
+    if: github.event_name == 'pull_request'
+
+    steps:
+      - name: Download frontend coverage
+        uses: actions/download-artifact@v4
+        with:
+          name: frontend-coverage-report
+          path: ./frontend-coverage
+
+      - name: Download backend coverage
+        uses: actions/download-artifact@v4
+        with:
+          name: backend-coverage-report
+          path: ./backend-coverage
+
+      - name: Create coverage comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+
+            let comment = '## 📊 Test Coverage Report\n\n';
+
+            // Frontend coverage
+            comment += '### Frontend Coverage\n';
+            try {
+              if (fs.existsSync('./frontend-coverage/coverage-summary.json')) {
+                const frontendCoverage = JSON.parse(fs.readFileSync('./frontend-coverage/coverage-summary.json', 'utf8'));
+                const total = frontendCoverage.total;
+                comment += `- **Lines**: ${total.lines.pct}% (${total.lines.covered}/${total.lines.total})\n`;
+                comment += `- **Functions**: ${total.functions.pct}% (${total.functions.covered}/${total.functions.total})\n`;
+                comment += `- **Branches**: ${total.branches.pct}% (${total.branches.covered}/${total.branches.total})\n`;
+                comment += `- **Statements**: ${total.statements.pct}% (${total.statements.covered}/${total.statements.total})\n`;
+              } else {
+                comment += 'Coverage data not available\n';
+              }
+            } catch (error) {
+              comment += 'Error reading frontend coverage data\n';
+            }
+
+            comment += '\n### Backend Coverage\n';
+            try {
+              if (fs.existsSync('./backend-coverage/lcov.info')) {
+                comment += 'Rust coverage report generated ✅\n';
+                comment += 'See artifacts for detailed HTML report\n';
+              } else {
+                comment += 'Coverage data not available\n';
+              }
+            } catch (error) {
+              comment += 'Error reading backend coverage data\n';
+            }
+
+            comment += '\n---\n';
+            comment += '*Coverage reports are available in the workflow artifacts*\n';
+
+            // Post comment
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+
+  coverage-threshold:
+    name: Coverage Threshold Check
+    runs-on: ubuntu-latest
+    needs: [frontend-coverage, backend-coverage]
+
+    steps:
+      - name: Download frontend coverage
+        uses: actions/download-artifact@v4
+        with:
+          name: frontend-coverage-report
+          path: ./frontend-coverage
+
+      - name: Check coverage thresholds
+        run: |
+          echo "## Coverage Threshold Check 🎯" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # Set minimum coverage thresholds
+          MIN_COVERAGE=70
+
+          if [ -f ./frontend-coverage/coverage-summary.json ]; then
+            COVERAGE=$(cat ./frontend-coverage/coverage-summary.json | grep -o '"pct":[0-9.]*' | head -1 | cut -d':' -f2)
+            COVERAGE=${COVERAGE%.*}  # Remove decimal part
+
+            echo "Frontend coverage: $COVERAGE%" >> $GITHUB_STEP_SUMMARY
+
+            if [ "$COVERAGE" -ge "$MIN_COVERAGE" ]; then
+              echo "✅ Frontend coverage meets threshold ($MIN_COVERAGE%)" >> $GITHUB_STEP_SUMMARY
+            else
+              echo "❌ Frontend coverage below threshold: $COVERAGE% < $MIN_COVERAGE%" >> $GITHUB_STEP_SUMMARY
+              echo "Please add more tests to improve coverage" >> $GITHUB_STEP_SUMMARY
+              exit 1
+            fi
+          else
+            echo "⚠️ Frontend coverage data not found" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Backend coverage analysis available in artifacts" >> $GITHUB_STEP_SUMMARY

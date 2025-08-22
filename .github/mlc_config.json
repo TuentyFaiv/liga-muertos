@@ -1,0 +1,42 @@
+{
+	"ignorePatterns": [
+		{
+			"pattern": "^https://apidog.com"
+		},
+		{
+			"pattern": "^https://la-liga-de-los-muertos.apidog.io"
+		},
+		{
+			"pattern": "^mailto:"
+		},
+		{
+			"pattern": "localhost"
+		},
+		{
+			"pattern": "127.0.0.1"
+		},
+		{
+			"pattern": "^#"
+		}
+	],
+	"replacementPatterns": [
+		{
+			"pattern": "^/",
+			"replacement": "https://github.com/TuentyFaiv/liga-muertos/blob/main/"
+		}
+	],
+	"httpHeaders": [
+		{
+			"urls": ["https://github.com"],
+			"headers": {
+				"Accept": "text/html",
+				"User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:96.0) Gecko/20100101 Firefox/96.0"
+			}
+		}
+	],
+	"timeout": "10s",
+	"retryOn429": true,
+	"retryCount": 3,
+	"fallbackRetryDelay": "30s",
+	"aliveStatusCodes": [200, 206, 429]
+}

@@ -1,0 +1,10 @@
+{
+	"seo": {
+		"title": "La Liga de los Muertos",
+		"description": "¡Bienvenido a la Liga de los Muertos! Aquí podrás ver los equipos, jugadores y estadísticas de la liga. ¡Disfruta del juego!"
+	},
+	"header": {
+		"language": "Idioma",
+		"theme-toggle": "Cambiar tema"
+	}
+}

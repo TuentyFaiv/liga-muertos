@@ -1,0 +1,32 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🌟 New Contributors Guide
+    url: https://github.com/TuentyFaiv/liga-muertos/blob/main/.github/NEWCOMERS.md
+    about: First-time contributor? Start here! Complete guide for newcomers
+  - name: 💬 GitHub Discussions
+    url: https://github.com/TuentyFaiv/liga-muertos/discussions
+    about: For general discussions, ideas, and community questions
+  - name: 📋 Contributing Guidelines
+    url: https://github.com/TuentyFaiv/liga-muertos/blob/main/CONTRIBUTING.md
+    about: Read our comprehensive contributing guidelines and development workflow
+  - name: 🏷️ Labels Guide
+    url: https://github.com/TuentyFaiv/liga-muertos/blob/main/.github/LABELS.md
+    about: Understand our GitHub labeling system and find good first issues
+  - name: 📜 Code of Conduct
+    url: https://github.com/TuentyFaiv/liga-muertos/blob/main/CODE_OF_CONDUCT.md
+    about: Review our community standards and expected behavior
+  - name: 📚 Project Documentation
+    url: https://github.com/TuentyFaiv/liga-muertos/blob/main/README.md
+    about: Read the project documentation and setup guides
+  - name: 🔗 API Documentation
+    url: https://la-liga-de-los-muertos.apidog.io
+    about: View the complete API documentation on APIdog
+  - name: 🎮 Twitch Integration
+    url: https://clerk.com/docs/authentication/social-connections/twitch
+    about: Learn about Twitch authentication integration with Clerk
+  - name: 📋 Project Workspace
+    url: https://tuentyfaiv.notion.site/2567c18490bf813ea1c5dfade251a85d?v=2567c18490bf812ca027000c6f4e9bf2&p=2567c18490bf807eaadff15a78a20d03&pm=s
+    about: View high-level project tracking and milestones on Notion
+  - name: ✨ Feature Requests Board
+    url: https://tuentyfaiv.notion.site/2567c18490bf80a8a744c2740febd8aa?v=2567c18490bf80bc800b000c498a85f0
+    about: Community feature requests and voting on Notion

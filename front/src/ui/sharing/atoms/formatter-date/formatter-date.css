@@ -1,0 +1,10 @@
+@reference "@styles/app.css";
+@import "./formatter-date.responsive.css";
+
+.formatterdate {
+	@apply block py-2.5 min-w-max;
+}
+
+.formatterdate .tiny {
+	@apply py-0;
+}

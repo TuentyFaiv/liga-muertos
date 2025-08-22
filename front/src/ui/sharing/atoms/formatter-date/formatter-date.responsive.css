@@ -1,0 +1,8 @@
+.formatterdate {
+	@media (min-width: 1024px) {
+		/* This is the breakpoint for larger screens, such as tablets and desktops */
+	}
+	@media (min-width: 1280px) {
+		/* This is the breakpoint for even larger screens, such as laptops and desktops */
+	}
+}

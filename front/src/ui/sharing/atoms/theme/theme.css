@@ -1,0 +1,15 @@
+@reference "@styles/app.css";
+
+.theme {
+	@apply w-full;
+	& > .slide-toggle-label {
+		@apply justify-between gap-2.5 flex-row-reverse;
+		& > .slide-toggle-text {
+			@apply ml-0;
+		}
+	}
+}
+
+.theme__text {
+	@apply block text-sm;
+}

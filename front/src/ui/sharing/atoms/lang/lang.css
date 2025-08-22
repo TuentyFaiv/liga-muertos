@@ -1,0 +1,13 @@
+@reference "@styles/app.css";
+
+.lang {
+	@apply w-full flex justify-between items-center;
+}
+
+.label__text {
+	@apply block font-semibold text-sm mb-1;
+}
+
+.label__select {
+	@apply max-w-[90px] appearance-none py-1 px-2 rounded-md text-sm;
+}

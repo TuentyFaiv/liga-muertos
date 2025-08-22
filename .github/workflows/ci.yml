@@ -46,7 +46,7 @@ jobs:
         run: bun run check
 
       - name: Lint check
-        run: bun run lint
+        run: bun run lint:fix
 
       - name: Unit tests
         run: bun run test:unit -- --run

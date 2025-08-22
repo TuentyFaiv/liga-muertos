@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 
 // Mock tournament types and functions for testing
 interface Tournament {
@@ -20,7 +20,7 @@ interface ValidationResult {
 }
 
 // Tournament utility functions to be tested
-export function createTournament(request: CreateTournamentRequest): Tournament {
+function createTournament(request: CreateTournamentRequest): Tournament {
 	return {
 		id: crypto.randomUUID(),
 		name: request.name,
@@ -30,7 +30,7 @@ export function createTournament(request: CreateTournamentRequest): Tournament {
 	};
 }
 
-export function validateTournament(tournament: Tournament): ValidationResult {
+function validateTournament(tournament: Tournament): ValidationResult {
 	const errors: string[] = [];
 
 	if (!tournament.name || tournament.name.trim().length === 0) {
@@ -61,13 +61,11 @@ export function validateTournament(tournament: Tournament): ValidationResult {
 	};
 }
 
-export function generateMatches(
-	participants: string[],
+function generateMatches(
+	participants: string[]
 ): Array<{ id: string; player1: string; player2: string; winner?: string }> {
 	const matches = [];
-	const shuffledParticipants = [...participants].sort(
-		() => Math.random() - 0.5,
-	);
+	const shuffledParticipants = [...participants].sort(() => Math.random() - 0.5);
 
 	for (let i = 0; i < shuffledParticipants.length; i += 2) {
 		if (i + 1 < shuffledParticipants.length) {
@@ -96,12 +94,7 @@ describe("Tournament Logic", () => {
 			expect(tournament).toBeDefined();
 			expect(tournament.id).toBeTruthy();
 			expect(tournament.name).toBe("La Liga Test Tournament");
-			expect(tournament.participants).toEqual([
-				"Player1",
-				"Player2",
-				"Player3",
-				"Player4",
-			]);
+			expect(tournament.participants).toEqual(["Player1", "Player2", "Player3", "Player4"]);
 			expect(tournament.status).toBe("draft");
 			expect(tournament.createdAt).toBeInstanceOf(Date);
 		});
@@ -181,9 +174,7 @@ describe("Tournament Logic", () => {
 			const result = validateTournament(tournament);
 
 			expect(result.isValid).toBe(false);
-			expect(result.errors).toContain(
-				"Tournament name must be less than 100 characters",
-			);
+			expect(result.errors).toContain("Tournament name must be less than 100 characters");
 		});
 
 		it("should reject tournament with insufficient participants", () => {
@@ -196,16 +187,11 @@ describe("Tournament Logic", () => {
 			const result = validateTournament(tournament);
 
 			expect(result.isValid).toBe(false);
-			expect(result.errors).toContain(
-				"Tournament must have at least 2 participants",
-			);
+			expect(result.errors).toContain("Tournament must have at least 2 participants");
 		});
 
 		it("should reject tournament with too many participants", () => {
-			const participants = Array.from(
-				{ length: 65 },
-				(_, i) => `Player${i + 1}`,
-			);
+			const participants = Array.from({ length: 65 }, (_, i) => `Player${i + 1}`);
 			const tournament: Tournament = {
 				name: "Massive Tournament",
 				participants,
@@ -215,9 +201,7 @@ describe("Tournament Logic", () => {
 			const result = validateTournament(tournament);
 
 			expect(result.isValid).toBe(false);
-			expect(result.errors).toContain(
-				"Tournament cannot have more than 64 participants",
-			);
+			expect(result.errors).toContain("Tournament cannot have more than 64 participants");
 		});
 
 		it("should reject tournament with duplicate participants", () => {
@@ -245,9 +229,7 @@ describe("Tournament Logic", () => {
 			expect(result.isValid).toBe(false);
 			expect(result.errors).toHaveLength(2);
 			expect(result.errors).toContain("Tournament name is required");
-			expect(result.errors).toContain(
-				"Tournament must have at least 2 participants",
-			);
+			expect(result.errors).toContain("Tournament must have at least 2 participants");
 		});
 	});
 
@@ -280,9 +262,9 @@ describe("Tournament Logic", () => {
 				...matches.map((match) => match.player2),
 			]);
 
-			participants.forEach((participant) => {
+			for (const participant of participants) {
 				expect(playersInMatches.has(participant)).toBe(true);
-			});
+			}
 		});
 
 		it("should generate unique match IDs", () => {
@@ -308,9 +290,9 @@ describe("Tournament Logic", () => {
 			const participants = ["Alice", "Bob", "Charlie", "David"];
 			const matches = generateMatches(participants);
 
-			matches.forEach((match) => {
+			for (const match of matches) {
 				expect(match.player1).not.toBe(match.player2);
-			});
+			}
 		});
 	});
 });

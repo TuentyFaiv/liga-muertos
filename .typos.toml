@@ -1,0 +1,173 @@
+# Typos configuration for Liga de los Muertos
+# Handles Spanish text, technical terms, and project-specific vocabulary
+
+[default]
+# Only check files typically containing prose
+extend-glob = ["*.md", "*.txt", "*.rst"]
+
+# Ignore translation files and generated content
+extend-exclude = [
+  "locales/**/*",
+  "src/logic/paraglide/**/*",
+  ".svelte-kit/**/*",
+  "target/**/*",
+  "node_modules/**/*",
+  "dist/**/*",
+  "build/**/*"
+]
+
+[default.extend-words]
+# Spanish words and phrases
+"Bienvenido" = "Bienvenido"
+"equipos" = "equipos"
+"jugadores" = "jugadores"
+"estadísticas" = "estadísticas"
+"Disfruta" = "Disfruta"
+"juego" = "juego"
+"Idioma" = "Idioma"
+"Cambiar" = "Cambiar"
+"tema" = "tema"
+"podrás" = "podrás"
+"Aquí" = "Aquí"
+"liga" = "liga"
+"de" = "de"
+"los" = "los"
+"las" = "las"
+"del" = "del"
+"la" = "la"
+"el" = "el"
+"un" = "un"
+"una" = "una"
+"con" = "con"
+"por" = "por"
+"para" = "para"
+"en" = "en"
+"y" = "y"
+"o" = "o"
+"que" = "que"
+"como" = "como"
+"ver" = "ver"
+
+# Spanish names and proper nouns
+"Tonalli" = "Tonalli"
+"López" = "López"
+"Muertos" = "Muertos"
+"muertos" = "muertos"
+
+# Technical terms and frameworks
+"SvelteKit" = "SvelteKit"
+"TailwindCSS" = "TailwindCSS"
+"TypeScript" = "TypeScript"
+"PostgreSQL" = "PostgreSQL"
+"SurrealDB" = "SurrealDB"
+"Paraglide" = "Paraglide"
+"Biome" = "Biome"
+"Playwright" = "Playwright"
+"Vitest" = "Vitest"
+"Storybook" = "Storybook"
+"ESLint" = "ESLint"
+"Prettier" = "Prettier"
+"Vite" = "Vite"
+"Vercel" = "Vercel"
+"Bun" = "Bun"
+"Cargo" = "Cargo"
+"Rust" = "Rust"
+"Clippy" = "Clippy"
+"rustfmt" = "rustfmt"
+
+# Brand and project terms
+"TuentyFaiv" = "TuentyFaiv"
+"tuentyfaiv" = "tuentyfaiv"
+"Liga" = "Liga"
+"Twitch" = "Twitch"
+"streamers" = "streamers"
+"streaming" = "streaming"
+"i18n" = "i18n"
+"l10n" = "l10n"
+
+# Common technical abbreviations
+"API" = "API"
+"APIs" = "APIs"
+"JSON" = "JSON"
+"YAML" = "YAML"
+"TOML" = "TOML"
+"HTTP" = "HTTP"
+"HTTPS" = "HTTPS"
+"URL" = "URL"
+"URLs" = "URLs"
+"CSS" = "CSS"
+"HTML" = "HTML"
+"JS" = "JS"
+"TS" = "TS"
+"JSX" = "JSX"
+"TSX" = "TSX"
+"SVG" = "SVG"
+"PNG" = "PNG"
+"JPG" = "JPG"
+"JPEG" = "JPEG"
+"GIF" = "GIF"
+"CI" = "CI"
+"CD" = "CD"
+"MVP" = "MVP"
+
+# File extensions and formats
+"md" = "md"
+"json" = "json"
+"toml" = "toml"
+"yml" = "yml"
+"yaml" = "yaml"
+"ts" = "ts"
+"js" = "js"
+"svelte" = "svelte"
+"css" = "css"
+"html" = "html"
+"rs" = "rs"
+
+# Common development terms
+"localhost" = "localhost"
+"repo" = "repo"
+"repos" = "repos"
+"config" = "config"
+"configs" = "configs"
+"env" = "env"
+"dev" = "dev"
+"prod" = "prod"
+"middleware" = "middleware"
+"auth" = "auth"
+"codebase" = "codebase"
+"namespace" = "namespace"
+"namespaces" = "namespaces"
+"enum" = "enum"
+"enums" = "enums"
+"struct" = "struct"
+"structs" = "structs"
+"impl" = "impl"
+"async" = "async"
+"await" = "await"
+"const" = "const"
+"let" = "let"
+"var" = "var"
+"fn" = "fn"
+"mut" = "mut"
+"pub" = "pub"
+
+# Version numbers and identifiers
+"v1" = "v1"
+"v2" = "v2"
+"v3" = "v3"
+"v4" = "v4"
+"v5" = "v5"
+
+# Miscellaneous project-specific terms
+"shadcn" = "shadcn"
+"paraglide" = "paraglide"
+"inlang" = "inlang"
+"postgrest" = "postgrest"
+"codecov" = "codecov"
+"github" = "github"
+"npm" = "npm"
+"bunx" = "bunx"
+"mlc" = "mlc"
+"dockerfile" = "dockerfile"
+"gitignore" = "gitignore"
+"eslintrc" = "eslintrc"

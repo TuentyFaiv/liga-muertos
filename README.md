@@ -166,7 +166,7 @@ Visit `http://localhost:5173` to see the frontend interface.
 - [ ] **v1.5 (Q4 2026)** - Advanced analytics, mobile optimizations
 - [ ] **v2.0 (Q1 2027)** - Multi-game support, tournament templates, streaming tools
 
-[View detailed roadmap →](https://github.com/TuentyFaiv/liga-muertos/projects)
+[View detailed roadmap →](https://tuentyfaiv.notion.site/2567c18490bf813ea1c5dfade251a85d?v=2567c18490bf812ca027000c6f4e9bf2&p=2567c18490bf807eaadff15a78a20d03&pm=s)
 
 ## 🐳 Deployment
 
@@ -267,7 +267,7 @@ Quick links:
 - 📜 [Code of Conduct](./CODE_OF_CONDUCT.md)
 - 🐛 [Report a Bug](https://github.com/TuentyFaiv/liga-muertos/issues/new?template=bug_report.yml)
 - ✨ [Request a Feature](https://github.com/TuentyFaiv/liga-muertos/issues/new?template=feature_request.yml)
-- 💬 [Join Discussions](https://github.com/TuentyFaiv/liga-muertos/discussions)
+- 💬 [Join Discussions](https://github.com/TuentyFaiv/liga-muertos/issues)
 - 🔗 [API Documentation](https://la-liga-de-los-muertos.apidog.io)
 
 ## License

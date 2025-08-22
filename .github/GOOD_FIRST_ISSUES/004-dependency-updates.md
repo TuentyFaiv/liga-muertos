@@ -140,7 +140,7 @@ cargo build
 - Comment on this issue if you encounter build errors after updates
 - Ask about specific dependencies if you're unsure about major version updates
 - Request guidance on handling breaking changes
-- Join our [discussions](https://github.com/TuentyFaiv/liga-muertos/discussions) for general questions
+- Join our [discussions](https://github.com/TuentyFaiv/liga-muertos/issues) for general questions
 - Tag @TuentyFaiv if you need help resolving conflicts or complex dependency issues
 
 ---

@@ -155,7 +155,7 @@ Then create a Pull Request on GitHub using our template!
 
 ### While Working
 - **Stuck on setup?** Check our [Contributing Guide](../CONTRIBUTING.md)
-- **Need technical help?** Comment on the issue or start a [Discussion](https://github.com/TuentyFaiv/liga-muertos/discussions)
+- **Need technical help?** Comment on the issue or start a [Discussion](https://github.com/TuentyFaiv/liga-muertos/issues)
 - **Found a bug?** Create a new issue with our bug report template
 
 ### Communication Tips
@@ -263,4 +263,4 @@ A: Yes! Create a feature request issue first to discuss it with the community.
 
 ---
 
-*Having trouble? Reach out in [Discussions](https://github.com/TuentyFaiv/liga-muertos/discussions) or tag @TuentyFaiv in your issue for help.*
+*Having trouble? Reach out in [Discussions](https://github.com/TuentyFaiv/liga-muertos/issues) or tag @TuentyFaiv in your issue for help.*

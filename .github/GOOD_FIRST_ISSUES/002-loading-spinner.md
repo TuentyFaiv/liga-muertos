@@ -83,7 +83,7 @@ The authentication button should display a loading spinner and be disabled while
 ## 🤝 Getting Help
 - Comment on this issue if you can't find the authentication component
 - Ask for clarification about the expected visual design
-- Join our [discussions](https://github.com/TuentyFaiv/liga-muertos/discussions) for general questions about SvelteKit
+- Join our [discussions](https://github.com/TuentyFaiv/liga-muertos/issues) for general questions about SvelteKit
 - Tag @TuentyFaiv if you need help locating the right files
 
 ---

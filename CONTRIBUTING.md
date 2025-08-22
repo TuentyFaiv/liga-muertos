@@ -483,7 +483,7 @@ When adding or modifying endpoints:
 - **Testing Guide**: [./.github/TESTING.md](./.github/TESTING.md)
 - **API Documentation**: https://la-liga-de-los-muertos.apidog.io
 - **GitHub Issues**: https://github.com/TuentyFaiv/liga-muertos/issues
-- **GitHub Discussions**: https://github.com/TuentyFaiv/liga-muertos/discussions
+- **GitHub Issues**: https://github.com/TuentyFaiv/liga-muertos/issues
 
 ### Communication
 
@@ -509,7 +509,7 @@ If you need help:
 - 🧪 [Testing guide and examples](./.github/TESTING.md)
 - 🐛 [Report a bug](https://github.com/TuentyFaiv/liga-muertos/issues/new?template=bug_report.yml)
 - ✨ [Request a feature](https://github.com/TuentyFaiv/liga-muertos/issues/new?template=feature_request.yml)
-- 💬 [Start a discussion](https://github.com/TuentyFaiv/liga-muertos/discussions)
+- 💬 [Start a discussion](https://github.com/TuentyFaiv/liga-muertos/issues)
 
 ## Recognition
 

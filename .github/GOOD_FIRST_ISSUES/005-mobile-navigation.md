@@ -150,7 +150,7 @@ The mobile navigation should provide a smooth, intuitive experience with proper 
 - Comment if you can't locate the navigation component
 - Ask for design guidance on animations or visual style
 - Request clarification about specific mobile interaction patterns
-- Join our [discussions](https://github.com/TuentyFaiv/liga-muertos/discussions) for general SvelteKit questions
+- Join our [discussions](https://github.com/TuentyFaiv/liga-muertos/issues) for general SvelteKit questions
 - Tag @TuentyFaiv if you need help with responsive design or accessibility requirements
 
 ## 🔍 Related Files to Examine

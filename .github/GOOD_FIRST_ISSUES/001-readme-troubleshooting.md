@@ -51,7 +51,7 @@ A new "## Troubleshooting" section should be added to the main `README.md` file 
 
 ## 🤝 Getting Help
 - Comment on this issue if you need clarification about which issues to include
-- Join our [discussions](https://github.com/TuentyFaiv/liga-muertos/discussions) for general questions
+- Join our [discussions](https://github.com/TuentyFaiv/liga-muertos/issues) for general questions
 - Check similar troubleshooting sections in other open source projects for inspiration
 - Tag @TuentyFaiv if you need urgent help or have questions about the project setup
 

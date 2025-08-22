@@ -113,7 +113,7 @@ Consider creating a reusable error display component:
 - Comment if you need help finding specific API calls or error handling code
 - Ask about the preferred UI design for error messages
 - Request clarification on specific error scenarios to handle
-- Join our [discussions](https://github.com/TuentyFaiv/liga-muertos/discussions) for general questions
+- Join our [discussions](https://github.com/TuentyFaiv/liga-muertos/issues) for general questions
 - Tag @TuentyFaiv if you need help with the error handling approach
 
 ---

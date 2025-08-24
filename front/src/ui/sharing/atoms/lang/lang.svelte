@@ -39,11 +39,12 @@ function onChange() {
     <DropdownMenu.Trigger
       class={buttonVariants({
         variant: "ghost",
-        class: "w-max min-h-[3.25rem] text-lg leading-5 justify-start gap-3",
+        size: "icon",
+        class: "w-full min-h-[3.25rem] text-lg leading-5 justify-start md:w-auto md:min-h-0 md:justify-center gap-3 md:size-10 md:rounded-full"
       })}
     >
       <Languages className="size-5" />
-      <span>{m["translation:header.language"]()}</span>
+      <span class="md:sr-only">{m["translation:header.language"]()}</span>
     </DropdownMenu.Trigger>
     <DropdownMenu.Content>
       <DropdownMenu.CheckboxItem checked={showES} onCheckedChange={onChange}>

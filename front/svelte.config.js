@@ -17,13 +17,15 @@ const config = {
 			mode: "auto",
 			directives: {
 				"object-src": ["none"],
-				"script-src": ["self", "unsafe-inline"], // "strict-dynamic",  "https:"],
+				"script-src": ["self", "unsafe-inline", "https:"], // "strict-dynamic"],
+				"worker-src": ["self", "blob:"],
 				"style-src": ["self"], // "unsafe-inline"],
 				"base-uri": ["self"],
 			},
 			reportOnly: {
 				"object-src": ["none"],
-				"script-src": ["self", "unsafe-inline"], // "strict-dynamic",  "https:"],
+				"script-src": ["self", "unsafe-inline", "https:"], // "strict-dynamic"],
+				"worker-src": ["self", "blob:"],
 				"style-src": ["self"], // "unsafe-inline"],
 				"base-uri": ["self"],
 				"report-to": ["self"],
@@ -47,6 +49,8 @@ const config = {
 			"@utils/*": "src/logic/utils/*",
 			// UI Home
 			"@home/*": "src/ui/home/*",
+			// UI Account
+			"@account/*": "src/ui/account/*",
 			// UI Auth
 			"@auth/*": "src/ui/auth/*",
 

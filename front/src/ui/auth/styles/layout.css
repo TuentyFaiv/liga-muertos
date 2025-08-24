@@ -1,0 +1,9 @@
+@reference "@styles/app.css";
+
+.auth-layout {
+	@apply h-dvh content-center;
+}
+
+.auth {
+	@apply mx-auto;
+}

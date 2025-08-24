@@ -1,0 +1,9 @@
+@reference "@styles/app.css";
+
+.account {
+	@apply w-full;
+}
+
+.account__box {
+	@apply w-full rounded-none max-w-full h-dvh;
+}

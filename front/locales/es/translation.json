@@ -4,7 +4,22 @@
 		"description": "¡Bienvenido a la Liga de los Muertos! Aquí podrás ver los equipos, jugadores y estadísticas de la liga. ¡Disfruta del juego!"
 	},
 	"header": {
+		"home": "Inicio",
+		"table": "Tabla",
+		"seasons": "Temporadas",
+		"tournaments": "Torneos",
+		"teams": "Equipos",
+		"players": "Jugadores",
+		"rules": "Reglas",
+		"contact": "Contacto",
+		"wealth": "Riqueza",
+		"profile": "Perfil",
+		"team": "Equipo",
+		"notifications": "Notificaciones",
+		"change-language": "Cambiar idioma",
+		"change-theme": "Cambiar tema",
 		"language": "Idioma",
-		"theme-toggle": "Cambiar tema"
+		"theme-toggle": "Cambiar tema",
+		"signin": "Iniciar sesión"
 	}
 }

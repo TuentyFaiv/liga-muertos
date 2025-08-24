@@ -1,0 +1,13 @@
+@reference "@styles/app.css";
+
+.user__action-icon {
+	@apply relative z-0;
+}
+
+.user__icon-theme {
+	@apply size-4 opacity-100 transition-all dark:opacity-0;
+}
+
+.user__icon-theme--dark {
+	@apply absolute z-0 opacity-0 dark:opacity-100 top-0;
+}

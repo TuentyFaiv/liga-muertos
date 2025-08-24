@@ -54,10 +54,13 @@
 		"vitest-browser-svelte": "^0.1.0"
 	},
 	"dependencies": {
+		"@clerk/localizations": "^3.23.0",
+		"@clerk/themes": "^2.4.13",
 		"@formkit/tempo": "^0.1.2",
 		"@inlang/paraglide-js": "^2.2.0",
 		"@lucide/svelte": "^0.515.0",
-		"mode-watcher": "^1.1.0"
+		"mode-watcher": "^1.1.0",
+		"svelte-clerk": "^0.16.8"
 	},
 	"resolutions": {
 		"cookie": "^0.7.0"

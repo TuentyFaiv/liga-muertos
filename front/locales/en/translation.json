@@ -4,7 +4,22 @@
 		"description": "Welcome to the La Liga de los Muertos! Here you can view teams, players, and league statistics. Enjoy the game!"
 	},
 	"header": {
+		"home": "Home",
+		"table": "Table",
+		"seasons": "Seasons",
+		"tournaments": "Tournaments",
+		"teams": "Teams",
+		"players": "Players",
+		"rules": "Rules",
+		"contact": "Contact",
+		"wealth": "Wealth",
+		"profile": "Profile",
+		"team": "Team",
+		"notifications": "Notifications",
+		"change-language": "Change Language",
+		"change-theme": "Change Theme",
 		"language": "Language",
-		"theme-toggle": "Toggle Theme"
+		"theme-toggle": "Toggle Theme",
+		"signin": "Sign In"
 	}
 }

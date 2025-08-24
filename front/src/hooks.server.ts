@@ -1,13 +1,5 @@
-import type { Handle } from "@sveltejs/kit";
-import { paraglideMiddleware } from "$lib/paraglide/server";
+import { sequence } from "@sveltejs/kit/hooks";
+import { clerkGuard, signinGuard } from "$lib/server/clerk";
+import { paraglideGuard } from "$lib/server/i18n";
 
-const handleParaglide: Handle = ({ event, resolve }) =>
-	paraglideMiddleware(event.request, ({ request, locale }) => {
-		event.request = request;
-
-		return resolve(event, {
-			transformPageChunk: ({ html }) => html.replace("%paraglide.lang%", locale),
-		});
-	});
-
-export const handle: Handle = handleParaglide;
+export const handle = sequence(paraglideGuard, clerkGuard, signinGuard);

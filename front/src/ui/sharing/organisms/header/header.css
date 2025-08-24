@@ -1,5 +1,13 @@
 @reference "@styles/app.css";
 
 .header {
-	@apply w-full;
+	@apply w-full flex gap-5 items-center justify-between p-5;
+}
+
+.header__side {
+	@apply flex items-center justify-center gap-2;
+}
+
+.header__nav {
+	@apply contents;
 }

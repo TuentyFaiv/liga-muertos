@@ -20,6 +20,8 @@ const config = {
 				"script-src": ["self", "unsafe-inline", "https:"], // "strict-dynamic"],
 				"worker-src": ["self", "blob:"],
 				"style-src": ["self", "unsafe-hashes"], // "unsafe-inline"],
+				"style-src-elem": ["self", "unsafe-hashes"], // "unsafe-inline"],
+				"style-src-attr": ["self", "unsafe-hashes"], // "unsafe-inline"],
 				"base-uri": ["self"],
 			},
 			reportOnly: {
@@ -27,6 +29,8 @@ const config = {
 				"script-src": ["self", "unsafe-inline", "https:"], // "strict-dynamic"],
 				"worker-src": ["self", "blob:"],
 				"style-src": ["self", "unsafe-hashes"], // "unsafe-inline"],
+				"style-src-elem": ["self", "unsafe-hashes"], // "unsafe-inline"],
+				"style-src-attr": ["self", "unsafe-hashes"], // "unsafe
 				"base-uri": ["self"],
 				"report-to": ["self"],
 				"report-uri": ["self"],

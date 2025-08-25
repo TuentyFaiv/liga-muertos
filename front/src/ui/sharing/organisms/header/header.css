@@ -9,5 +9,5 @@
 }
 
 .header__nav {
-	@apply contents;
+	@apply hidden md:contents;
 }

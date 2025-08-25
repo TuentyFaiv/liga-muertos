@@ -21,5 +21,13 @@
 		"language": "Idioma",
 		"theme-toggle": "Cambiar tema",
 		"signin": "Iniciar sesión"
+	},
+	"footer": {
+		"menu": "Menú",
+		"legals": "Legales",
+		"terms": "Términos y Condiciones",
+		"privacy": "Política de Privacidad",
+		"contact": "Contacto",
+		"follow-us": "Síguenos en las redes sociales"
 	}
 }

@@ -9,6 +9,7 @@ import { getLocale } from "$lib/paraglide/runtime";
 import "@styles";
 
 import { Header } from "@sharing/organisms/header";
+import { Footer } from "@sharing/organisms/footer";
 
 let localization = $derived(getLocale() === "es" ? esMX : enUS);
 
@@ -21,4 +22,5 @@ let { children }: { children: Snippet } = $props();
 	<main>
 		{@render children?.()}
 	</main>
+	<Footer />
 </ClerkProvider>

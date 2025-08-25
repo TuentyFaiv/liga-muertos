@@ -1,0 +1,92 @@
+# Términos y Condiciones — La Liga de los Muertos
+
+Fecha de última actualización: 25 de agosto de 2025
+
+Estos Términos y Condiciones (los “Términos”) regulan el acceso y uso del sitio y servicios disponibles en ligadelosmuertos.com (la “Plataforma”), operada por Tuentyfaiv con domicilio en Ciudad de México, México (“Tuentyfaiv”, “nosotros”). Al acceder o usar la Plataforma, aceptas estos Términos. Si no estás de acuerdo, no uses la Plataforma.
+
+## 1. Descripción del servicio
+-  La Plataforma permite gestionar y visualizar información de una liga de fútbol en streaming, participar en torneos, consultar estadísticas, administrar perfiles y realizar compras virtuales.
+-  Algunos componentes se integran con servicios de terceros (p. ej., Twitch, Clerk, Vercel Analytics, Cloudflare).
+
+## 2. Registro de cuentas, elegibilidad y menores de edad
+-  Para usar funciones específicas debes crear una cuenta e iniciar sesión (autenticación mediante Clerk con integración de Twitch).
+-  Declaras que:
+  - Tienes al menos 13 años. La Plataforma no está dirigida a menores de 13 años y no permitimos su registro.
+  - Si tienes entre 13 y 17 años (o la mayoría de edad aplicable), cuentas con el consentimiento y supervisión de tu madre/padre o tutor legal para: (i) crear la cuenta, (ii) participar en torneos, (iii) realizar compras virtuales, y (iv) publicar contenido (incluida imagen/voz).
+  - La información proporcionada es veraz, exacta y se mantendrá actualizada.
+-  Nos reservamos el derecho de solicitar y verificar evidencia razonable de consentimiento parental y de cerrar o suspender cuentas cuando no se acredite.
+-  Si identificamos una cuenta de un menor de 13 años, la cerraremos y eliminaremos los datos asociados conforme a la Política de Privacidad.
+
+## 3. Conducta del usuario
+Está prohibido:
+-  Usar la Plataforma para actividades ilícitas, infractoras o que vulneren derechos de terceros.
+-  Publicar o transmitir contenido difamatorio, obsceno, violento, discriminatorio, de odio o que incite a la violencia.
+-  Interferir con la operación técnica de la Plataforma (malware, scraping no autorizado, ataques, elusión de controles de seguridad).
+-  Suplantar identidad o falsear tu vínculo con terceros.
+-  Intentar acceder a datos o áreas no autorizadas.
+-  Publicar datos personales de terceros (especialmente de menores) sin consentimiento válido del titular o de su tutor.
+
+Podremos suspender o cancelar cuentas por infracciones a estos Términos o por riesgos de seguridad, fraude o abuso.
+
+## 4. Contenido del usuario y uso de imagen/voz
+-  Conservas los derechos sobre el contenido que publiques. Nos concedes una licencia no exclusiva, mundial, gratuita y sublicenciable para alojar, reproducir, adaptar y mostrar dicho contenido con el fin de operar y mejorar la Plataforma.
+-  Declaras tener los derechos necesarios sobre el contenido que publicas y que su uso en la Plataforma no infringe derechos de terceros.
+-  Cartas/perfiles de jugador: puedes elegir “foto real” o “avatar”. Si eres menor de edad, la subida de “foto real” y/o cualquier contenido que implique tu imagen/voz requiere consentimiento previo de madre/padre o tutor legal. Puedes retirar ese consentimiento solicitando la eliminación o sustitución a través de develop@tuentyfaiv.com; aplicaremos la remoción en un plazo razonable, sin afectar actos ya consumados técnica o legalmente irreversibles.
+
+## 5. Torneos, reglas y moderación
+-  La participación en torneos está sujeta a reglamentos específicos (formato, horarios, sanciones, criterios de elegibilidad). Podemos actualizar reglas para preservar la integridad competitiva.
+-  Podremos anular resultados, sancionar o descalificar por fraude, conducta antideportiva o violaciones a reglas o a estos Términos.
+
+## 6. Propiedad intelectual
+- La Plataforma es un proyecto de código abierto gestionado por Tuentyfaiv; el software se distribuye bajo la licencia indicada en el repositorio (MIT). El uso del código se rige por dicha licencia.
+- “La Liga de los Muertos” como concepto y ciertos elementos artísticos/branding asociados son propiedad de su creador original, el streamer “elded”. El uso de esos elementos fuera del alcance permitido por la licencia del software requiere autorización expresa de sus titulares.
+- Parte del arte y materiales visuales de la Plataforma pueden provenir de la iniciativa original de “elded” y se utilizan bajo licencia o acuerdo correspondiente, con reconocimiento a sus titulares.
+- Nada en estos Términos concede derechos de propiedad sobre marcas, logos, nombres comerciales, obras artísticas o conceptuales de terceros. Cualquier uso no permitido está prohibido.
+
+## 7. Compras virtuales, moneda interna y menores
+-  La Plataforma puede ofrecer artículos virtuales, sobres/cartas, mejoras estéticas o funcionalidades, así como monedas o créditos internos sin valor fuera de la Plataforma y no convertibles a dinero.
+-  Salvo disposición legal aplicable, las compras virtuales son finales y no reembolsables.
+-  Si eres menor de edad (13–17), declaras contar con autorización de tu madre/padre o tutor legal para cualquier compra. Podemos cancelar o revertir transacciones si detectamos falta de autorización o fraude.
+-  Podremos modificar disponibilidad, características y precios de artículos o monedas en cualquier momento.
+
+## 8. Servicios de terceros e integraciones
+-  Autenticación y gestión de permisos: Clerk (con OAuth de Twitch).
+-  Streaming y cuentas conectadas: Twitch.
+-  Analítica y rendimiento: Vercel Analytics y Cloudflare.
+-  El uso de estos servicios se rige además por sus términos y políticas propias. No controlamos sus prácticas y no somos responsables por sus actos u omisiones.
+
+## 9. Clasificación de contenido y avisos
+-  La Plataforma y los contenidos vinculados a transmisiones en vivo pueden incluir lenguaje para mayores de 13 años, contenidos competitivos y chat en tiempo real. Se recomienda discreción y supervisión adulta para menores.
+-  No controlamos el contenido generado por terceros en Twitch u otras integraciones externas; puedes reportar material inapropiado para su revisión.
+
+## 10. Relación con la Política de Privacidad
+-  El tratamiento de datos personales (qué datos se recaban, finalidades, transferencias, conservación y derechos ARCO) se rige por nuestra Política de Privacidad vigente en la Plataforma, que contempla integraciones con Clerk, Twitch, Vercel y Cloudflare y el tratamiento específico de datos de menores.
+-  Al usar la Plataforma, reconoces haber leído y entendido la Política de Privacidad y aceptas el tratamiento de datos conforme a ella.
+
+## 11. Exención de garantías
+-  La Plataforma se proporciona “tal cual” y “según disponibilidad”. No garantizamos disponibilidad continua, ausencia de errores, exactitud de estadísticas o compatibilidad con todos los dispositivos o navegadores.
+-  Podremos interrumpir o modificar la Plataforma, total o parcialmente, en cualquier momento.
+
+## 12. Limitación de responsabilidad
+En la máxima medida permitida por la ley aplicable, Tuentyfaiv no será responsable por daños indirectos, incidentales, especiales, consecuenciales o punitivos (incluyendo pérdida de datos, ingresos o reputación) derivados del uso o imposibilidad de uso de la Plataforma, integraciones de terceros o contenido de usuarios, aunque hayamos sido advertidos de la posibilidad de tales daños.
+
+## 13. Indemnización
+Te comprometes a indemnizar y mantener indemne a Tuentyfaiv, sus afiliados y personal frente a reclamaciones, daños, costos y gastos (incluidos honorarios razonables de abogados) que deriven de: (a) tu uso de la Plataforma, (b) tu contenido, (c) tu incumplimiento de estos Términos o de leyes aplicables, o (d) la infracción de derechos de terceros.
+
+## 14. Procedimiento para madres/padres o tutores
+-  Si eres madre/padre o tutor y consideras que un menor ha creado una cuenta sin tu autorización, ha publicado “foto real” sin tu consentimiento, o ha realizado compras no autorizadas:
+  - Escríbenos a develop@tuentyfaiv.com con: (i) identificación del menor y tuya, (ii) relación tutelar, (iii) solicitud concreta (cierre de cuenta, eliminación de datos/imagen/voz, revisión de compras).
+  - Atenderemos tu solicitud en un plazo razonable. Podremos solicitar información adicional para verificar identidad y tutela.
+-  Para datos personales y derechos ARCO, aplica lo previsto en la Política de Privacidad.
+
+## 15. Suspensión y terminación
+Podemos suspender o terminar tu acceso en cualquier momento por incumplimiento de estos Términos, riesgos de seguridad o requerimientos legales. Tras la terminación, cesará tu derecho de uso; ciertas obligaciones (p. ej., propiedad intelectual, limitaciones de responsabilidad) continuarán vigentes.
+
+## 16. Cambios en los Términos
+Podemos actualizar estos Términos. Publicaremos la versión vigente en la Plataforma con su fecha de actualización. El uso continuado tras la actualización implica tu aceptación de los cambios.
+
+## 17. Ley aplicable y jurisdicción
+Estos Términos se rigen por las leyes de México. Cualquier controversia se someterá a los tribunales competentes de Ciudad de México, México.
+
+## 18. Contacto
+Dudas sobre estos Términos: develop@tuentyfaiv.com

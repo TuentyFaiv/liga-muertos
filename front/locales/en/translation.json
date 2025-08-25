@@ -21,5 +21,13 @@
 		"language": "Language",
 		"theme-toggle": "Toggle Theme",
 		"signin": "Sign In"
+	},
+	"footer": {
+		"menu": "Menu",
+		"legals": "Legals",
+		"terms": "Terms and Conditions",
+		"privacy": "Privacy Policy",
+		"contact": "Contact",
+		"follow-us": "Follow us on social media"
 	}
 }

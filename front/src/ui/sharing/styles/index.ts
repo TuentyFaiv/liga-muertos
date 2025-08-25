@@ -1,1 +1,2 @@
 import "./app.css";
+import "./layout.css";

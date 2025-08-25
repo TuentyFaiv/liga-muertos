@@ -8,7 +8,10 @@
 	],
 	"plugin.inlang.i18next": {
 		"pathPattern": {
-			"translation": "./locales/{locale}/translation.json"
+			"translation": "./locales/{locale}/translation.json",
+			"auth": "./locales/{locale}/auth.json",
+			"account": "./locales/{locale}/account.json",
+			"legals": "./locales/{locale}/legals.json"
 		}
 	}
 }

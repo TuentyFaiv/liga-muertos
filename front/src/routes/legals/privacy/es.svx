@@ -1,0 +1,80 @@
+# Política de Privacidad - La Liga de los Muertos
+
+#### CAPÍTULO I – INFORMACIÓN GENERAL
+
+**Art. 1º** – Tuentyfaiv, operando desde Ciudad de México, México, es responsable del tratamiento de los datos personales recabados a través de nuestro sitio web ligadelosmuertos.com.
+
+**Art. 2º** – Este aviso se emite conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP).
+
+#### CAPÍTULO II – DATOS RECABADOS
+
+**Art. 3º** – Los datos personales que podemos recabar incluyen:
+1. **Perfil**:
+   - Nombre y apellido
+   - Imagen de perfil
+   - Foto real o avatar en tarjeta de jugador
+2. **Información de Contacto**:
+   - Dirección de correo electrónico
+   - Correo electrónico de Twitch
+3. **Nombre de Usuario**:
+   - Alias utilizado en la plataforma
+4. **Cuentas Conectadas**:
+   - Información de autenticación de Twitch (tokens, nombre de usuario, y correo electrónico)
+5. **Seguridad**:
+   - Contraseña (almacenada de forma segura)
+   - Historial de dispositivos activos y último inicio de sesión
+6. **Información Técnica**:
+   - Dirección IP
+   - Información sobre cookies
+7. **Actividades en la Plataforma**:
+   - Participación en torneos
+   - Compras virtuales y transacciones
+8. **Enlaces Sociales**:
+   - Enlaces a redes sociales opcionales agregados por el usuario
+
+#### CAPÍTULO III – FINALIDAD DEL TRATAMIENTO
+
+**Art. 4º** – Los datos personales se utilizan para:
+-   Gestionar el acceso y registro de los usuarios.
+-   Permitir la participación en torneos y actividades.
+-   Mostrar estadísticas y contenido público del perfil.
+-   Procesar compras dentro de la tienda virtual.
+-   Enviar notificaciones relacionadas con el funcionamiento de la plataforma.
+-   Mostrar contenido promocional o publicitario de interés para la comunidad gaming.
+-   Gestionar la autenticación y los permisos de los usuarios a través de Clerk, integrando servicios de Twitch para autenticación.
+-   Analizar datos de usuario y de rendimiento del sitio mediante herramientas de Vercel y Cloudflare para mejora de servicios.
+
+#### CAPÍTULO IV – MENORES DE EDAD
+
+**Art. 5º** – La Plataforma no está destinada a menores de 13 años.
+-   Los usuarios entre 13 y 17 años deben obtener consentimiento de una madre, padre o tutor para registrar una cuenta, realizar compras virtuales, y subir imagen/voz.
+-   Para solicitar la eliminación de datos de menores, el procedimiento está descrito en el CAPÍTULO VI.
+
+#### CAPÍTULO V – USO DE COOKIES Y TECNOLOGÍAS SIMILARES
+
+**Art. 6º** – Utilizamos cookies para mejorar la experiencia del usuario, que pueden incluir:
+-   Cookies de sesión para mantener autenticada la sesión del usuario.
+-   Cookies analíticas para evaluar el uso de la plataforma mediante Vercel y Cloudflare.
+-   Cookies publicitarias de terceros.
+
+#### CAPÍTULO VI – DERECHOS DEL USUARIO
+
+**Art. 7º** – Los usuarios tienen derechos ARCO (Acceso, Rectificación, Cancelación y Oposición) respecto a sus datos personales, los cuales pueden ejercer contactándonos a través del correo electrónico: develop@tuentyfaiv.com.
+-   Padres o tutores pueden solicitar la eliminación de cuentas de menores contactando el mismo correo y proporcionando pruebas de su relación tutelar.
+
+#### CAPÍTULO VII – SEGURIDAD Y CONSERVACIÓN
+
+**Art. 8º** – Implementamos medidas de seguridad avanzadas, incluidas aquellas de nuestros socios como Clerk, Twitch, Vercel, y Cloudflare, para proteger los datos personales. Conservamos los datos solo el tiempo necesario para cumplir los propósitos establecidos.
+
+#### CAPÍTULO VIII – TRANSFERENCIA DE DATOS
+
+**Art. 9º** – No compartimos datos personales con terceros, exceptuando:
+-   Obligaciones legales o regulatorias.
+-   Proveedores como Clerk para autenticación y Twitch para servicios de streaming, asegurando que cumplen con los estándares de seguridad y privacidad.
+-   Herramientas de análisis de Vercel y Cloudflare.
+
+#### CAPÍTULO IX – MODIFICACIONES AL AVISO
+
+**Art. 10º** – Nos reservamos el derecho de actualizar este aviso para reflejar cambios en nuestras prácticas, y los mismos serán publicados en nuestro sitio web.
+
+**Última actualización: 25/08/2025**

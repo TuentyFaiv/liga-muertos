@@ -1,0 +1,32 @@
+{
+	"account": {
+		"seo": {
+			"title": "Cuenta"
+		}
+	},
+	"player": {
+		"seo": {
+			"title": "Perfil"
+		}
+	},
+	"personalization": {
+		"seo": {
+			"title": "Personalización"
+		}
+	},
+	"collection": {
+		"seo": {
+			"title": "Colección"
+		}
+	},
+	"security": {
+		"seo": {
+			"title": "Seguridad"
+		}
+	},
+	"tabs": {
+		"player": "Perfil de jugador",
+		"personalization": "Personalización",
+		"collection": "Colección"
+	}
+}

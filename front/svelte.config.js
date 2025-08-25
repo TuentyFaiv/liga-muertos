@@ -55,6 +55,8 @@ const config = {
 			"@home/*": "src/ui/home/*",
 			// UI Account
 			"@account/*": "src/ui/account/*",
+			// UI Legals
+			"@legals/*": "src/ui/legals/*",
 			// UI Auth
 			"@auth/*": "src/ui/auth/*",
 

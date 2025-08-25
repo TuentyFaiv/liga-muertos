@@ -1,0 +1,92 @@
+# Terms and Conditions — La Liga de los Muertos
+
+Last updated: August 25, 2025
+
+These Terms and Conditions (the “Terms”) govern access to and use of the website and services available at ligadelosmuertos.com (the “Platform”), operated by Tuentyfaiv with registered office in Mexico City, Mexico (“Tuentyfaiv,” “we”). By accessing or using the Platform, you agree to these Terms. If you do not agree, do not use the Platform.
+
+## 1. Service Description
+-  The Platform allows managing and viewing information about a streaming soccer league, participating in tournaments, consulting statistics, managing profiles, and making virtual purchases.
+-  Some components integrate with third-party services (e.g., Twitch, Clerk, Vercel Analytics, Cloudflare).
+
+## 2. Account Registration, Eligibility, and Minors
+-  To use specific features, you must create an account and log in (authentication via Clerk with Twitch integration).
+-  You declare that:
+  - You are at least 13 years old. The Platform is not intended for minors under 13, and we do not allow their registration.
+  - If you are between 13 and 17 (or the applicable age of majority), you have the consent and supervision of your mother/father or legal guardian to: (i) create the account, (ii) participate in tournaments, (iii) make virtual purchases, and (iv) publish content (including images/voice).
+  - The information you provide is truthful, accurate, and will be kept up to date.
+-  We reserve the right to request and verify reasonable evidence of parental consent and to close or suspend accounts when such proof is not provided.
+-  If we identify an account of a minor under 13, we will close it and delete the associated data in accordance with the Privacy Policy.
+
+## 3. User Conduct
+Prohibited actions include:
+-  Using the Platform for illegal activities, infringements, or rights violations of third parties.
+-  Publishing or transmitting defamatory, obscene, violent, discriminatory, hate speech, or inciting violence content.
+-  Interfering with the technical operation of the Platform (malware, unauthorized scraping, attacks, security control bypass).
+-  Impersonating or falsely claiming a connection with third parties.
+-  Attempting to access unauthorized data or areas.
+-  Publishing third-party personal data (especially minors) without valid consent from the owner or guardian.
+
+We may suspend or cancel accounts for violations of these Terms or due to security risks, fraud, or abuse.
+
+## 4. User Content and Use of Image/Voice
+-  You retain rights over the content you publish. You grant us a non-exclusive, worldwide, free, and sublicensable license to host, reproduce, adapt, and display such content to operate and improve the Platform.
+-  You declare that you have the necessary rights over the content you publish and that its use on the Platform does not infringe third-party rights.
+-  Player cards/profiles: you can choose “real photo” or “avatar.” If you are a minor, uploading a “real photo” and/or any content involving your image/voice requires prior consent from your mother/father or guardian. You can withdraw that consent by requesting removal or replacement via develop@tuentyfaiv.com; we will process the removal within a reasonable period, without affecting acts already completed legally or technically.
+
+## 5. Tournaments, Rules, and Moderation
+-  Participation in tournaments is subject to specific regulations (format, schedule, sanctions, eligibility criteria). We may update rules to preserve competitive integrity.
+-  We may annul results, impose sanctions, or disqualify for fraud, unsportsmanlike conduct, or violations of rules or these Terms.
+
+## 6. Intellectual Property
+-  The Platform is an open-source project managed by Tuentyfaiv; the software is distributed under the license specified in the repository (MIT). Use of the code is governed by that license.
+-  “La Liga de los Muertos” as a concept and certain artistic/branding elements are owned by their original creator, streamer “elded.” Use of those elements outside the scope permitted by the software license requires explicit authorization from their owners.
+-  Some art and visual materials of the Platform may originate from the original initiative of “elded” and are used under license or relevant agreement, with acknowledgment to their owners.
+-  Nothing in these Terms grants ownership rights over third-party trademarks, logos, trade names, artistic or conceptual works. Unauthorized use is prohibited.
+
+## 7. Virtual Purchases, Internal Currency, and Minors
+-  The Platform may offer virtual items, packs/cards, aesthetic upgrades, functionalities, as well as internal coins or credits with no value outside the Platform and not convertible into money.
+-  Except where legally required, virtual purchases are final and non-refundable.
+-  If you are a minor (13–17), you declare that you have obtained your mother’s/father’s or guardian’s authorization for any purchase. We may cancel or reverse transactions if unauthorized or fraudulent activity is detected.
+-  We may modify the availability, features, and prices of items or coins at any time.
+
+## 8. Third-Party Services and Integrations
+-  Authentication and permission management: Clerk (with Twitch OAuth).
+-  Streaming and connected accounts: Twitch.
+-  Analytics and performance: Vercel Analytics and Cloudflare.
+-  Use of these services is also governed by their own terms and policies. We do not control their practices and are not responsible for their acts or omissions.
+
+## 9. Content Classification and Notices
+-  The Platform and related content, including live streams, may include language for audiences over 13, competitive content, and real-time chat. Discretion and adult supervision are recommended for minors.
+-  We do not control third-party generated content on Twitch or other external integrations; you may report inappropriate material for review.
+
+## 10. Relationship with Privacy Policy
+-  The processing of personal data (what data is collected, purposes, transfers, retention, ARCO rights) is governed by our current Privacy Policy on the Platform, which includes integrations with Clerk, Twitch, Vercel, and Cloudflare and specific data handling for minors.
+-  By using the Platform, you acknowledge that you have read and understood the Privacy Policy and accept the data processing described therein.
+
+## 11. Warranties Disclaimer
+-  The Platform is provided “as is” and “as available.” We do not guarantee continuous availability, error-free operation, accuracy of statistics, or compatibility with all devices or browsers.
+-  We may suspend or modify the Platform, in whole or in part, at any time.
+
+## 12. Limitation of Liability
+To the maximum extent permitted by law, Tuentyfaiv shall not be liable for indirect, incidental, special, consequential, or punitive damages (including loss of data, revenue, or reputation) arising from the use or inability to use the Platform, third-party integrations, or user content, even if warned of such damages.
+
+## 13. Indemnification
+You agree to indemnify and hold harmless Tuentyfaiv, its affiliates, and personnel against claims, damages, costs, and expenses (including reasonable attorneys' fees) arising from: (a) your use of the Platform, (b) your content, (c) your breach of these Terms or applicable laws, or (d) infringement of third-party rights.
+
+## 14. Procedure for Mothers/Fathers or Guardians
+-  If you are a mother/father or guardian and believe a minor created an account without your authorization, posted “real photo” without your consent, or made unauthorized purchases:
+  - Contact us at develop@tuentyfaiv.com with: (i) identification of the minor and yourself, (ii) guardianship relationship, (iii) specific request (account closure, data/image/voice removal, review of purchases).
+  - We will handle your request within a reasonable period. Additional information may be requested to verify identity and guardianship.
+-  For personal data and ARCO rights, the provisions of the Privacy Policy apply.
+
+## 15. Suspension and Termination
+We may suspend or terminate your access at any time for breach of these Terms, security risks, or legal requirements. After termination, your right to use the Platform ceases; certain obligations (e.g., intellectual property, liability limitations) will remain in effect.
+
+## 16. Changes to the Terms
+We may update these Terms. The current version will be posted on the Platform with its update date. Continued use after updates implies your acceptance of the changes.
+
+## 17. Governing Law and Jurisdiction
+These Terms are governed by Mexican law. Any disputes will be submitted to the competent courts of Mexico City, Mexico.
+
+## 18. Contact
+Questions about these Terms: develop@tuentyfaiv.com

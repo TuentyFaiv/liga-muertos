@@ -40,11 +40,11 @@ function onChange() {
       class={buttonVariants({
         variant: "ghost",
         size: "icon",
-        class: "w-full min-h-[3.25rem] text-lg leading-5 justify-start md:w-auto md:min-h-0 md:justify-center gap-3 md:size-10 md:rounded-full"
+        class: "w-auto min-h-0 justify-center size-10 rounded-full"
       })}
     >
       <Languages className="size-5" />
-      <span class="md:sr-only">{m["translation:header.language"]()}</span>
+      <span class="sr-only">{m["translation:header.language"]()}</span>
     </DropdownMenu.Trigger>
     <DropdownMenu.Content>
       <DropdownMenu.CheckboxItem checked={showES} onCheckedChange={onChange}>

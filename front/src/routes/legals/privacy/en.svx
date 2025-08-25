@@ -1,0 +1,80 @@
+# Privacy Policy - La Liga de los Muertos
+
+#### CHAPTER I – GENERAL INFORMATION
+
+**Art. 1** – Tuentyfaiv, operating from Mexico City, Mexico, is responsible for the processing of personal data collected through our website ligadelosmuertos.com.
+
+**Art. 2** – This notice is issued in accordance with the Federal Law on Protection of Personal Data Held by Private Parties (LFPDPPP).
+
+#### CHAPTER II – DATA COLLECTED
+
+**Art. 3** – The personal data we may collect includes:
+1. **Profile**:
+   - First and last name
+   - Profile image
+   - Real photo or avatar on the player card
+2. **Contact Information**:
+   - Email address
+   - Twitch email
+3. **Username**:
+   - Alias used on the platform
+4. **Connected Accounts**:
+   - Twitch authentication information (tokens, username, and email)
+5. **Security**:
+   - Password (stored securely)
+   - Active device history and last login
+6. **Technical Information**:
+   - IP address
+   - Cookie information
+7. **Platform Activities**:
+   - Participation in tournaments
+   - Virtual purchases and transactions
+8. **Social Links**:
+   - Optional social media links added by the user
+
+#### CHAPTER III – PURPOSE OF THE PROCESSING
+
+**Art. 4** – Personal data is used to:
+-  Manage user access and registration.
+-  Enable participation in tournaments and activities.
+-  Display profile statistics and public content.
+-  Process purchases within the virtual store.
+-  Send notifications related to platform operation.
+-  Show promotional or advertising content of interest to the gaming community.
+-  Manage user authentication and permissions via Clerk, integrating Twitch services for authentication.
+-  Analyze user data and site performance data using Vercel and Cloudflare tools to improve services.
+
+#### CHAPTER IV – MINORS
+
+**Art. 5** – The Platform is not intended for minors under 13 years old.
+-  Users between 13 and 17 must obtain consent from a parent or guardian to register an account, make virtual purchases, and upload images/voice.
+-  To request the deletion of minors' data, the procedure is described in CHAPTER VI.
+
+#### CHAPTER V – USE OF COOKIES AND SIMILAR TECHNOLOGIES
+
+**Art. 6** – We use cookies to enhance user experience, which may include:
+-  Session cookies to keep the user authenticated.
+-  Analytical cookies to evaluate platform usage via Vercel and Cloudflare.
+-  Third-party advertising cookies.
+
+#### CHAPTER VI – USER RIGHTS
+
+**Art. 7** – Users have ARCO rights (Access, Rectification, Cancellation, and Opposition) regarding their personal data, which they can exercise by contacting us via email at develop@tuentyfaiv.com.
+-  Parents or guardians can request the deletion of minors' accounts by contacting the same email and providing proof of guardianship.
+
+#### CHAPTER VII – SECURITY AND RETENTION
+
+**Art. 8** – We implement advanced security measures, including those of our partners like Clerk, Twitch, Vercel, and Cloudflare, to protect personal data. We retain data only for as long as necessary to fulfill the purposes established.
+
+#### CHAPTER VIII – DATA TRANSFER
+
+**Art. 9** – We do not share personal data with third parties, except:
+-  Legal or regulatory obligations.
+-  Providers such as Clerk for authentication and Twitch for streaming services, ensuring they meet security and privacy standards.
+-  Analysis tools from Vercel and Cloudflare.
+
+#### CHAPTER IX – MODIFICATIONS TO THE NOTICE
+
+**Art. 10** – We reserve the right to update this notice to reflect changes in our practices, which will be published on our website.
+
+**Last update: 08/25/2025**

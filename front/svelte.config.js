@@ -23,6 +23,7 @@ const config = {
 					"https://*.clerk.accounts.dev",
 					"https://*.ligadelosmuertos.com",
 					"https://va.vercel-scripts.com",
+					"https://challenges.cloudflare.com",
 				],
 				"worker-src": ["self", "blob:"],
 				"style-src": [
@@ -31,6 +32,7 @@ const config = {
 					"https://*.clerk.accounts.dev",
 					"https://*.ligadelosmuertos.com",
 					"https://va.vercel-scripts.com",
+					"https://challenges.cloudflare.com",
 				],
 				"style-src-elem": [
 					"self",
@@ -38,6 +40,7 @@ const config = {
 					"https://*.clerk.accounts.dev",
 					"https://*.ligadelosmuertos.com",
 					"https://va.vercel-scripts.com",
+					"https://challenges.cloudflare.com",
 				],
 				"style-src-attr": [
 					"self",
@@ -45,6 +48,7 @@ const config = {
 					"https://*.clerk.accounts.dev",
 					"https://*.ligadelosmuertos.com",
 					"https://va.vercel-scripts.com",
+					"https://challenges.cloudflare.com",
 				],
 				"base-uri": ["self"],
 			},
@@ -56,6 +60,7 @@ const config = {
 					"https://*.clerk.accounts.dev",
 					"https://*.ligadelosmuertos.com",
 					"https://va.vercel-scripts.com",
+					"https://challenges.cloudflare.com",
 				],
 				"worker-src": ["self", "blob:"],
 				"style-src": [
@@ -64,6 +69,7 @@ const config = {
 					"https://*.clerk.accounts.dev",
 					"https://*.ligadelosmuertos.com",
 					"https://va.vercel-scripts.com",
+					"https://challenges.cloudflare.com",
 				],
 				"style-src-elem": [
 					"self",
@@ -71,6 +77,7 @@ const config = {
 					"https://*.clerk.accounts.dev",
 					"https://*.ligadelosmuertos.com",
 					"https://va.vercel-scripts.com",
+					"https://challenges.cloudflare.com",
 				],
 				"style-src-attr": [
 					"self",
@@ -78,6 +85,7 @@ const config = {
 					"https://*.clerk.accounts.dev",
 					"https://*.ligadelosmuertos.com",
 					"https://va.vercel-scripts.com",
+					"https://challenges.cloudflare.com",
 				],
 				"base-uri": ["self"],
 				"report-to": ["self"],

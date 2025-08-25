@@ -5,5 +5,13 @@
 }
 
 .auth {
-	@apply mx-auto;
+	@apply mx-auto w-full max-w-md;
+}
+
+.auth__box {
+	@apply w-full mx-auto;
+}
+
+.auth__checkbox-label {
+	@apply text-balance;
 }

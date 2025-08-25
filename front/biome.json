@@ -321,7 +321,8 @@
 						"noSelfAssign": "off",
 						"noUnusedVariables": "off",
 						"noUnusedImports": "off",
-						"noUndeclaredVariables": "off"
+						"noUndeclaredVariables": "off",
+						"useHookAtTopLevel": "off"
 					},
 					"style": {
 						"useConst": "off",

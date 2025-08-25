@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { Snippet } from "svelte";
+import type { Snippet } from "svelte";
 
-  import "@legals/styles/layout.css";
+import "@legals/styles/layout.css";
 
-  let { children }: { children: Snippet } = $props();
+let { children }: { children: Snippet } = $props();
 </script>
 
 <section class="legals section">

@@ -1,8 +1,7 @@
 <script lang="ts">
+import { SEO } from "@sharing/atoms/seo";
 import { SignIn } from "svelte-clerk";
 import { m } from "$lib/paraglide/messages";
-
-import { SEO } from "@sharing/atoms/seo";
 </script>
 
 <SEO title={m["auth:seo.title"]()} />

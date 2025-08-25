@@ -1,9 +1,8 @@
 <script lang="ts">
+import type { CustomPage } from "@clerk/types";
 import { mount, onMount, unmount } from "svelte";
 import { UserProfile } from "svelte-clerk";
 import { m } from "$lib/paraglide/messages";
-
-import type { CustomPage } from "@clerk/types";
 import type { PageProps } from "./$types";
 
 import "@account/styles/page.css";

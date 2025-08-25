@@ -1,10 +1,10 @@
 @reference "@styles/app.css";
 
-.legals {
+/*.legals {
 }
 
 .legals__container {
-}
+}*/
 
 .legals__text {
 	& :is(p, li) {

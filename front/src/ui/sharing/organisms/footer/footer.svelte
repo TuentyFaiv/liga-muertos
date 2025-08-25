@@ -1,6 +1,6 @@
 <script lang="ts">
-import { m } from "$lib/paraglide/messages";
 import config from "@config";
+import { m } from "$lib/paraglide/messages";
 
 import "./footer.css";
 
@@ -40,7 +40,7 @@ let nav = $derived([
 				href: "/contact",
 				label: m["translation:header.contact"](),
 			},
-		]
+		],
 	},
 	{
 		title: m["translation:footer.legals"](),
@@ -53,10 +53,9 @@ let nav = $derived([
 				href: "/legals/privacy",
 				label: m["translation:footer.privacy"](),
 			},
-		]
-	}
-])
-
+		],
+	},
+]);
 </script>
 
 <footer class="footer section">
